@@ -1,0 +1,14 @@
+<h2> {{ bookname }}</h2>
+
+<div >
+    <h2>{{ book.title }}</h2>
+    <p><strong>Authors:</strong> {{ getAuthorNames(book.authors) }}</p>
+    <p><strong>Number of Pages:</strong> {{ book.numPages }}</p>
+    <p><strong>Rating:</strong> {{ book.rating }}</p>
+    <p><strong>Number of People Rated:</strong> {{ book.numRatings }}</p>
+    <p><strong>Genres:</strong> {{ getGenreNames(book.genres) }}</p>
+    <img src="{{ book.coverImageUrl }}" alt="Book Cover">
+  </div>
+
+  <button (click)="findReview()">Find Review</button>
+  <button (click)="goBack()">Return to View 2</button>
